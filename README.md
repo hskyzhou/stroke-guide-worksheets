@@ -2,7 +2,9 @@
 
 **简体中文** | [English](README_EN.md)
 
-[在线使用](https://handwriting.hskylab.com/) · [源码仓库](https://github.com/hskyzhou/stroke-guide-worksheets) · [提交问题或建议](https://github.com/hskyzhou/stroke-guide-worksheets/issues/new/choose) · [支持项目](https://ko-fi.com/hskylab)
+![起收笔字帖：中文、英文和数字书写练习](assets/brand/social-preview.svg)
+
+[在线使用](https://handwriting.hskylab.com/) · [源码仓库](https://github.com/hskyzhou/stroke-guide-worksheets) · [提交问题或建议](https://github.com/hskyzhou/stroke-guide-worksheets/issues/new/choose) · [支持项目](https://ko-fi.com/hskylab) · [开发计划](ROADMAP.md)
 
 一个在浏览器中生成中文、英文和数字练习字帖的静态网页。支持笔顺、起收笔与方向提示、逐笔加画、指定笔画练习、拼音、描红、教材生字预设以及 A4 打印。
 
@@ -50,6 +52,8 @@ Patrick Hand 字体、`pinyin-pro` 拼音库和汉字笔画数据均随项目本
 欢迎提交字表纠错、笔顺依据、打印问题和代码改进。请先阅读 [`CONTRIBUTING.md`](CONTRIBUTING.md)。报告安全问题请参阅 [`SECURITY.md`](SECURITY.md)。
 
 请通过 [GitHub Issues](https://github.com/hskyzhou/stroke-guide-worksheets/issues/new/choose) 提交问题或建议，也可以发送邮件到 [xezw211@gmail.com](mailto:xezw211@gmail.com)。请勿附带学生姓名、学校或联系方式等个人信息。
+
+版本变化见 [`CHANGELOG.md`](CHANGELOG.md)，发布与推广文案见 [`PROMOTION.md`](PROMOTION.md)。
 
 ## 许可证
 

@@ -287,7 +287,10 @@ function createPage(number,compact=false,type='hanzi') {
   const worksheet=document.createElement('div');
   worksheet.className='worksheet';
   if(number===1)worksheet.id='worksheet';
-  paper.append(header,worksheet);
+  const footer=document.createElement('div');
+  footer.className='paper-footer';
+  footer.innerHTML=`<span>起收笔字帖 · handwriting.hskylab.com</span><span>第 ${number} 页</span>`;
+  paper.append(header,worksheet,footer);
   return {paper,worksheet};
 }
 const directionCues={
@@ -566,6 +569,24 @@ $('resetBtn').addEventListener('click',()=>{
   window.resetNoticeTimer=setTimeout(()=>$('saveState').textContent='设置自动保存在本机',3000);
 });
 $('printBtn').addEventListener('click',()=>window.print());
+$('shareBtn').addEventListener('click',async()=>{
+  const button=$('shareBtn'), original=button.textContent;
+  const shareData={title:'起收笔字帖',text:'免费生成中文、英文和数字书写练习字帖',url:'https://handwriting.hskylab.com/'};
+  try {
+    if(navigator.share)await navigator.share(shareData);
+    else {
+      await navigator.clipboard.writeText(shareData.url);
+      button.textContent='网址已复制';
+      window.setTimeout(()=>button.textContent=original,2000);
+    }
+  } catch(error) {
+    if(error?.name!=='AbortError'){
+      const input=document.createElement('textarea');input.value=shareData.url;input.setAttribute('readonly','');input.style.position='fixed';input.style.opacity='0';document.body.append(input);input.select();
+      const copied=document.execCommand('copy');input.remove();
+      button.textContent=copied?'网址已复制':'复制失败';window.setTimeout(()=>button.textContent=original,2000);
+    }
+  }
+});
   $('curriculumGrade').addEventListener('change',populateCurriculumLessons);
   $('curriculumTerm').addEventListener('change',populateCurriculumLessons);
   $('curriculumLesson').addEventListener('change',renderCurriculumCharacters);

@@ -10,7 +10,16 @@
   <meta property="og:title" content="起收笔字帖" />
   <meta property="og:description" content="在线生成中文、英文和数字书写练习字帖。" />
   <meta property="og:url" content="https://handwriting.hskylab.com/" />
-  <link rel="stylesheet" href="./styles.css?v=20260922-public-url" />
+  <meta property="og:image" content="https://handwriting.hskylab.com/assets/brand/social-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#14243a" />
+  <link rel="icon" href="./assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="./site.webmanifest" />
+  <link rel="stylesheet" href="./styles.css?v=20260922-growth-foundation" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"起收笔字帖","alternateName":"Stroke Guide Worksheets","url":"https://handwriting.hskylab.com/","applicationCategory":"EducationalApplication","operatingSystem":"Web","isAccessibleForFree":true,"inLanguage":["zh-CN","en"],"description":"在线生成中文、英文和数字书写练习字帖，支持笔顺、描红、拼音与 A4 打印。","license":"https://www.gnu.org/licenses/agpl-3.0.html","codeRepository":"https://github.com/hskyzhou/stroke-guide-worksheets"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"字帖需要注册或上传练习内容吗？","acceptedAnswer":{"@type":"Answer","text":"不需要注册。字帖在浏览器中生成，练习内容不会发送到项目自己的服务器。"}},{"@type":"Question","name":"可以打印或保存成 PDF 吗？","acceptedAnswer":{"@type":"Answer","text":"可以。点击打印或存为 PDF，并在浏览器打印窗口中选择打印机或保存为 PDF。"}},{"@type":"Question","name":"支持哪些练习内容？","acceptedAnswer":{"@type":"Answer","text":"支持汉字、英文字母和数字练习，并提供汉字笔顺、拼音、描红和统编语文一至六年级会写字预设。"}}]}</script>
 </head>
 <body>
   <header class="topbar">
@@ -79,6 +88,11 @@
       <div class="config-section"><div class="config-heading"><strong>自定义配置</strong></div><form id="saveConfigForm"><label for="configName">配置名称</label><input id="configName" type="text" maxlength="30" placeholder="例如：我的一年级字帖" required /><button class="save-config-button" id="saveConfig" type="submit">另存为此名称</button></form><p class="save-config-status" id="saveConfigStatus" role="status" aria-live="polite">保存在当前浏览器；不包含输入的汉字。</p><div class="saved-configs" id="savedConfigs" aria-label="已保存的自定义配置"></div></div>
     </aside>
   </main>
+  <section class="site-guide" aria-labelledby="siteGuideTitle">
+    <div class="site-guide-intro"><span>免费 · 无需注册 · 浏览器内生成</span><h2 id="siteGuideTitle">快速制作可打印的书写练习字帖</h2><p>输入要练习的内容，选择笔顺、方格和描红方式，即可打印或保存为 A4 PDF。适合家庭练习、课堂教学和海外中文学习。</p></div>
+    <div class="site-guide-features"><article><b>中文字帖</b><p>汉字笔顺、起收笔、拼音、逐笔加画和教材会写字。</p></article><article><b>英文字帖</b><p>大小写 A–Z、四线三格、一字母一行或一字母一页。</p></article><article><b>数字字帖</b><p>数字 0–9 的书写方向、描红和独立练习。</p></article></div>
+    <div class="site-faq"><h2>常见问题</h2><details><summary>需要注册或上传练习内容吗？</summary><p>不需要注册。字帖在浏览器中生成，练习内容不会发送到项目自己的服务器。</p></details><details><summary>如何打印或保存为 PDF？</summary><p>点击页面右上角“打印 / 存为 PDF”，然后在浏览器打印窗口中选择打印机或保存为 PDF。</p></details><details><summary>教材字表和笔顺是否可能存在差异？</summary><p>教材版次、地区和教学规范可能存在差异。教材相关纠错请注明出版社、版次、印次、年级、册次和页码。</p></details></div>
+  </section>
   <footer class="site-footer">
     <div><strong>起收笔字帖</strong><span>© 2026 起收笔字帖贡献者</span></div>
     <nav aria-label="网站基本信息">
@@ -87,6 +101,7 @@
       <button type="button" data-info="third-party">第三方材料说明</button>
       <button type="button" data-info="contributing">参与贡献</button>
       <button type="button" data-info="feedback">反馈建议</button>
+      <button type="button" id="shareBtn">分享网站</button>
     </nav>
   </footer>
   <dialog class="info-dialog" id="infoDialog" aria-labelledby="infoDialogTitle">
@@ -96,6 +111,6 @@
   <script src="./assets/vendor/pinyin-pro/index.js?v=3.18.2" onload="window.dispatchEvent(new Event('pinyin-ready'))"></script>
   <script src="./curriculum.js?v=20260921-grades-1-6"></script>
   <script src="./letter-strokes.js?v=20260921-letter-order"></script>
-  <script src="./script.js?v=20260922-repository-links"></script>
+  <script src="./script.js?v=20260922-growth-foundation"></script>
 </body>
 </html>

@@ -1,0 +1,13 @@
+{
+  "name": "起收笔字帖",
+  "short_name": "起收笔字帖",
+  "description": "中文、英文和数字书写练习字帖生成器",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f6f8",
+  "theme_color": "#14243a",
+  "icons": [
+    { "src": "/assets/brand/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

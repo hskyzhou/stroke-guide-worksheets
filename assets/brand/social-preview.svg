@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5f8f7"/><stop offset="1" stop-color="#e8f2ee"/></linearGradient>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse"><path d="M72 0H0V72" fill="none" stroke="#9db6aa" stroke-width="1" opacity=".22"/><path d="M36 0V72M0 36H72" stroke="#9db6aa" stroke-width="1" stroke-dasharray="5 6" opacity=".16"/></pattern>
+  </defs>
+  <rect width="1200" height="630" rx="36" fill="url(#bg)"/>
+  <rect x="698" width="502" height="630" fill="url(#grid)"/>
+  <rect x="64" y="62" width="72" height="72" rx="20" fill="#14243a"/>
+  <path d="M100 76v44M78 98h44M84 82l32 32M116 82l-32 32" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="100" cy="98" r="8" fill="#2e9c71" stroke="#fff" stroke-width="3"/>
+  <text x="160" y="111" font-family="PingFang SC,Microsoft YaHei,Arial,sans-serif" font-size="34" font-weight="700" fill="#26384f">起收笔字帖</text>
+  <text x="64" y="238" font-family="PingFang SC,Microsoft YaHei,Arial,sans-serif" font-size="62" font-weight="800" fill="#14243a">把每一笔写明白</text>
+  <text x="66" y="292" font-family="Arial,sans-serif" font-size="25" fill="#607087">Printable handwriting worksheets</text>
+  <g font-family="PingFang SC,Microsoft YaHei,Arial,sans-serif" font-size="22" font-weight="700">
+    <rect x="64" y="352" width="150" height="54" rx="27" fill="#fff"/><text x="95" y="387" fill="#2c6952">汉字笔顺</text>
+    <rect x="228" y="352" width="150" height="54" rx="27" fill="#fff"/><text x="259" y="387" fill="#2c6952">英文描红</text>
+    <rect x="392" y="352" width="150" height="54" rx="27" fill="#fff"/><text x="423" y="387" fill="#2c6952">数字练习</text>
+  </g>
+  <text x="64" y="526" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#40566e">handwriting.hskylab.com</text>
+  <g transform="translate(765 96)">
+    <rect width="330" height="438" rx="18" fill="#fff" filter="drop-shadow(0 18px 28px rgba(20,36,58,.13))"/>
+    <text x="32" y="55" font-family="PingFang SC,Microsoft YaHei,Arial,sans-serif" font-size="21" font-weight="700" fill="#26384f">汉字书写练习</text>
+    <g transform="translate(32 92)" fill="none" stroke="#b8c8c0">
+      <g><rect width="82" height="82"/><path d="M41 0v82M0 41h82" stroke-dasharray="4 5"/></g>
+      <g transform="translate(82)"><rect width="82" height="82"/><path d="M41 0v82M0 41h82" stroke-dasharray="4 5"/></g>
+      <g transform="translate(164)"><rect width="82" height="82"/><path d="M41 0v82M0 41h82" stroke-dasharray="4 5"/></g>
+      <g transform="translate(0 113)"><rect width="82" height="82"/><path d="M41 0v82M0 41h82" stroke-dasharray="4 5"/></g>
+      <g transform="translate(82 113)"><rect width="82" height="82"/><path d="M41 0v82M0 41h82" stroke-dasharray="4 5"/></g>
+      <g transform="translate(164 113)"><rect width="82" height="82"/><path d="M41 0v82M0 41h82" stroke-dasharray="4 5"/></g>
+    </g>
+    <g font-family="Kaiti SC,STKaiti,serif" font-size="58" text-anchor="middle" fill="#26384f"><text x="73" y="153">永</text><text x="155" y="153" opacity=".35">永</text><text x="237" y="153" opacity=".18">永</text><text x="73" y="266">字</text><text x="155" y="266" opacity=".35">字</text></g>
+    <path d="M42 348h246M42 372h246M42 396h246" stroke="#d7e0dc" stroke-width="2"/>
+  </g>
+</svg>
