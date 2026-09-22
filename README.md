@@ -2,9 +2,11 @@
 
 **简体中文** | [English](README_EN.md)
 
-[在线源码仓库](https://github.com/hskyzhou/stroke-guide-worksheets) · [提交问题或建议](https://github.com/hskyzhou/stroke-guide-worksheets/issues/new/choose) · [支持项目](https://ko-fi.com/hskylab)
+[在线使用](https://handwriting.hskylab.com/) · [源码仓库](https://github.com/hskyzhou/stroke-guide-worksheets) · [提交问题或建议](https://github.com/hskyzhou/stroke-guide-worksheets/issues/new/choose) · [支持项目](https://ko-fi.com/hskylab)
 
 一个在浏览器中生成中文、英文和数字练习字帖的静态网页。支持笔顺、起收笔与方向提示、逐笔加画、指定笔画练习、拼音、描红、教材生字预设以及 A4 打印。
+
+网站地址：<https://handwriting.hskylab.com/>
 
 ## 功能
 
