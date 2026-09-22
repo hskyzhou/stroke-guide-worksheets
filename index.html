@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>起收笔字帖 · 汉字练习</title>
+  <link rel="stylesheet" href="./styles.css?v=20260922-header-actions" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">✳</span><span>起收笔字帖<small>把每一笔写明白</small></span></div>
+    <nav class="worksheet-type" aria-label="字帖类型"><select id="worksheetType" aria-label="字帖类型" hidden><option value="hanzi">汉字</option><option value="numbers">数字</option><option value="letters">字母</option></select><div class="type-buttons" role="group" aria-label="选择字帖类型"><button type="button" data-type="hanzi" aria-pressed="true">中文字帖</button><button type="button" data-type="letters" aria-pressed="false">英文字帖</button><button type="button" data-type="numbers" aria-pressed="false">数字字帖</button></div></nav>
+    <div class="top-actions"><span class="save-state" id="saveState" role="status" aria-live="polite">设置自动保存在本机</span><a class="button repo-button" href="https://github.com/hskyzhou/stroke-guide-worksheets" target="_blank" rel="noopener noreferrer" aria-label="在新窗口打开 GitHub 仓库">GitHub <span aria-hidden="true">↗</span></a><button class="button feedback-button" type="button" data-info="feedback">反馈建议</button><button class="button support-button" type="button" data-info="support"><span aria-hidden="true">♡</span> 支持项目</button><button class="button dark" id="printBtn">打印 / 存为 PDF ↗</button></div>
+  </header>
+  <main class="app-shell">
+    <aside class="sidebar">
+      <div class="side-heading"><span>字帖设置</span><span class="side-heading-icon">⚙</span></div>
+      <section class="panel-section">
+        <div class="section-label">01 / 笔画引导 <span class="new-tag">新增</span></div>
+        <div class="toggle-row"><div><strong>显示笔顺</strong><small>逐笔拆解并标注序号</small></div><input type="checkbox" id="showStrokeOrder" checked /></div>
+        <div class="toggle-row" id="endpointOption"><div><strong>显示起笔与收笔</strong><small>绿色起点 · 红色终点 · 方向箭头</small></div><input type="checkbox" id="showEndpoints" checked /></div>
+        <div id="strokeOrderSizeOption"><label for="strokeOrderSize">笔顺图大小 <output id="strokeOrderSizeValue">16mm</output></label><input id="strokeOrderSize" type="range" min="8" max="16" value="16" /></div>
+        <div class="toggle-row"><div><strong>逐笔加画练习</strong><small>首格一笔，逐格增加到完整字</small></div><input type="checkbox" id="progressivePractice" checked /></div>
+        <div class="toggle-row"><div><strong>指定笔画单练</strong><small>可选多个字、每字多笔，与整字同尺寸</small></div><input type="checkbox" id="focusStrokeEnabled" checked /></div>
+        <div class="focus-stroke-controls" id="focusStrokeControls"><div class="focus-stroke-title">选择要单练的字和笔画</div><p class="focus-stroke-hint">展开单个汉字后选择笔画；支持全选和清空。</p><input id="focusSelections" type="hidden" value="{}" /><div class="focus-char-choices" id="focusCharChoices" role="group" aria-label="选择单练的字和笔画"></div></div>
+        <div class="toggle-row"><div><strong>显示拼音</strong><small>在字格上方标注读音</small></div><input type="checkbox" id="showPinyin" checked /></div>
+        <div class="legend"><span><i class="dot start"></i>起笔</span><span><i class="dot end"></i>收笔</span><span>➜ 行笔方向</span></div>
+      </section>
+      <section class="panel-section">
+        <div class="section-label">02 / 字帖排版</div>
+        <div class="compact-switches">
+          <div class="toggle-row compact"><label for="blankRows">插入空行</label><input type="checkbox" id="blankRows" /></div>
+          <div class="toggle-row compact"><label for="blankCols">插入空列</label><input type="checkbox" id="blankCols" aria-describedby="blankColsHint" /></div>
+        </div>
+        <p class="hint" id="blankColsHint" role="status">开启后，描红字之间留一格；每行末格仍留白。</p>
+        <label for="gridType">方格类型</label><select id="gridType"><option value="tian">田字格</option><option value="mi">米字格</option><option value="square">方格</option><option value="english">英文四线三格</option><option value="none">无格</option></select>
+        <div class="two-col"><div><label for="gridSize">方格大小 <output id="gridSizeValue">12mm</output></label><input id="gridSize" type="range" min="10" max="22" value="12" /></div><div><label for="rowGap">首字与字间距 <output id="rowGapValue">4mm</output></label><input id="rowGap" type="range" min="2" max="12" value="4" /></div></div>
+      </section>
+      <section class="panel-section">
+        <div class="section-label">03 / 描红样式</div>
+        <label for="traceMode">描红填充</label><select id="traceMode"><option value="auto">自动填满 · 每行末格留白</option><option value="fixed">固定描红数量</option></select>
+        <label for="traceCount">描红数量 <output id="traceCountValue">4</output></label><input id="traceCount" type="range" min="0" max="12" value="4" />
+        <details class="advanced-settings"><summary>更多排版与样式</summary>
+        <label for="margin">页边距</label><select id="margin"><option value="0">无 · 0mm</option><option value="6">极窄 · 6mm</option><option value="12" selected>窄 · 12mm</option><option value="18">适中 · 18mm</option><option value="24">宽 · 24mm</option></select>
+        <div class="two-col"><div><label for="fontFamily">字体</label><select id="fontFamily"><option value="primary">Patrick Hand · 单层 ɑ</option><option value="school">系统儿童手写体</option><option value="arial">Arial 印刷体</option><option value="rounded">Arial 圆体</option><option value="kai">楷体</option><option value="song">宋体</option><option value="hei">黑体</option></select></div><div><label for="fontWeight">字体粗细</label><select id="fontWeight"><option value="normal">常规</option><option value="bold">加粗</option></select></div></div>
+        <p class="hint" id="fontHint">字体和粗细用于未覆盖笔画数据的文字；有笔画数据的字使用笔画轮廓。</p>
+        <div class="two-col"><div><label for="fontSize">字体大小 <output id="fontSizeValue">72%</output></label><input id="fontSize" type="range" min="45" max="95" value="72" /></div><div><label for="verticalOffset">上下偏移 <output id="verticalOffsetValue">0%</output></label><input id="verticalOffset" type="range" min="-20" max="20" value="0" /></div></div>
+        <div class="two-col color-row"><div><label for="traceColor">描红颜色</label><input type="color" id="traceColor" value="#c7cbd4" /></div><div><label for="lineColor">线条颜色</label><input type="color" id="lineColor" value="#d4dce5" /></div></div>
+        <p class="hint">0mm 页边距可能超出打印机可打印区域；打印前请预览。</p>
+        </details>
+      </section>
+    </aside>
+    <section class="workspace">
+      <div class="editor-bar">
+        <div class="letter-mode-controls" id="letterCaseControl" hidden><div><label for="letterCase">字母形式</label><select id="letterCase"><option value="uppercase">大写 A–Z</option><option value="lowercase">小写 a–z</option></select></div><div><label for="letterLayout">排版</label><select id="letterLayout"><option value="line">一字母一行</option><option value="page">一字母一页</option></select></div></div>
+        <div class="editor-heading"><label for="content" id="contentLabel">输入汉字</label><span id="contentHint">支持多行文字，生成整字练习字帖</span></div>
+        <div class="letter-picker" id="letterPickerControl" hidden><label for="letterPicker">快速选择字母</label><select id="letterPicker"></select></div>
+        <textarea id="content" rows="2" placeholder="输入你想练习的汉字…">一二三</textarea>
+      </div>
+      <div class="preview-summary" id="previewSummary" role="status" aria-live="polite"></div>
+      <div class="preview-wrap" id="previewWrap"><div class="paper" id="paper"><div class="paper-header"><span>汉字书写练习</span><span>姓名：____________　日期：____________</span></div><div id="worksheet"></div></div></div>
+      <p class="source-note">笔画数据：<a href="https://github.com/chanind/hanzi-writer-data" target="_blank" rel="noreferrer">Hanzi Writer Data</a>，已随网站本地保存并按需加载。一至六年级教材会写字按统编语文各册写字表整理；不同版次可能有调整，具体以手中教材为准。原创程序代码采用 AGPL-3.0 开源。</p>
+    </section>
+    <aside class="config-bar" aria-label="配置预设">
+      <div class="config-section curriculum-picker">
+        <div class="config-heading"><strong>教材字帖</strong></div>
+        <p class="curriculum-note">统编语文 · 一至六年级 · 只选会写字</p>
+        <div class="curriculum-controls"><label for="curriculumGrade">年级</label><select id="curriculumGrade"><option value="1">一年级</option><option value="2">二年级</option><option value="3">三年级</option><option value="4">四年级</option><option value="5">五年级</option><option value="6">六年级</option></select><label for="curriculumTerm">册次</label><select id="curriculumTerm"><option value="upper">上册</option><option value="lower">下册</option></select><label for="curriculumLesson">课次</label><select id="curriculumLesson"></select></div>
+        <div class="curriculum-characters" id="curriculumCharacters" aria-label="选择本课会写字"></div>
+        <div class="curriculum-actions"><span id="curriculumStatus" role="status"></span><button class="button dark" id="loadCurriculum" type="button">载入所选字</button></div>
+      </div>
+      <div class="config-section"><div class="config-heading"><strong>默认配置</strong></div><div class="preset-controls" role="group" aria-label="快速配置"><button type="button" data-preset="recommended" title="12mm 方格、逐笔加画、窄边距">一年级推荐</button><button type="button" data-preset="tracing" title="14mm 方格，减少逐笔示范，留更多描红格">多练描红</button><button type="button" data-preset="compact" title="12mm 方格、6mm 页边距，关闭逐笔加画；打印机可能无法打印到纸张边缘">节省纸张</button></div><button class="button subtle reset-config-button" id="resetBtn" type="button" title="将文字与所有字帖选项恢复为初始值">重置默认配置</button></div>
+      <div class="config-section"><div class="config-heading"><strong>自定义配置</strong></div><form id="saveConfigForm"><label for="configName">配置名称</label><input id="configName" type="text" maxlength="30" placeholder="例如：我的一年级字帖" required /><button class="save-config-button" id="saveConfig" type="submit">另存为此名称</button></form><p class="save-config-status" id="saveConfigStatus" role="status" aria-live="polite">保存在当前浏览器；不包含输入的汉字。</p><div class="saved-configs" id="savedConfigs" aria-label="已保存的自定义配置"></div></div>
+    </aside>
+  </main>
+  <footer class="site-footer">
+    <div><strong>起收笔字帖</strong><span>© 2026 起收笔字帖贡献者</span></div>
+    <nav aria-label="网站基本信息">
+      <button type="button" data-info="license">AGPL-3.0 开源许可</button>
+      <button type="button" data-info="privacy">隐私与网络请求</button>
+      <button type="button" data-info="third-party">第三方材料说明</button>
+      <button type="button" data-info="contributing">参与贡献</button>
+      <button type="button" data-info="feedback">反馈建议</button>
+    </nav>
+  </footer>
+  <dialog class="info-dialog" id="infoDialog" aria-labelledby="infoDialogTitle">
+    <div class="info-dialog-head"><h2 id="infoDialogTitle">项目信息</h2><button type="button" id="closeInfoDialog" aria-label="关闭">×</button></div>
+    <div class="info-dialog-body" id="infoDialogBody"></div>
+  </dialog>
+  <script src="./assets/vendor/pinyin-pro/index.js?v=3.18.2" onload="window.dispatchEvent(new Event('pinyin-ready'))"></script>
+  <script src="./curriculum.js?v=20260921-grades-1-6"></script>
+  <script src="./letter-strokes.js?v=20260921-letter-order"></script>
+  <script src="./script.js?v=20260922-repository-links"></script>
+</body>
+</html>

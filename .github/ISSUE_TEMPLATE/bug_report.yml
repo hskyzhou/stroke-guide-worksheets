@@ -1,0 +1,39 @@
+name: 功能或打印问题
+description: 报告功能、界面、浏览器兼容或打印问题
+title: "[问题] "
+labels: [bug]
+body:
+  - type: dropdown
+    id: worksheet
+    attributes:
+      label: 字帖类型
+      options: [中文字帖, 英文字帖, 数字字帖, 通用界面]
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 操作步骤
+      description: 请说明使用的设置和复现步骤。
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 当前结果与期望结果
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 浏览器、系统和设备
+      placeholder: 例如：Chrome 128 / Windows 11 / A4 打印
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隐私确认
+      options:
+        - label: 我已确认文字和截图中不包含学生姓名、学校或联系方式等个人信息。
+          required: true

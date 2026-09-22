@@ -1,0 +1,32 @@
+name: 字表或笔顺纠错
+description: 提交教材字表、汉字、字母或数字书写顺序纠错
+title: "[纠错] "
+labels: [data-correction]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: 纠错类型
+      options: [教材字表, 汉字笔顺, 字母书写顺序, 数字书写顺序]
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: 问题与建议改法
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: 参考依据
+      description: 教材问题请注明出版社、版次、印次、年级、册次和页码；其他问题请提供可核对的规范来源。
+    validations:
+      required: true
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: 提交确认
+      options:
+        - label: 我没有上传整本教材、来源不明材料或包含个人信息的内容。
+          required: true
