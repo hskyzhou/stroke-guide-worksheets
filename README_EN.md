@@ -59,4 +59,16 @@ The project name, visual identity, third party fonts, stroke data, and textbook 
 
 ## Support the Project
 
-The core worksheet generator is intended to remain free. You can support hosting, curriculum list maintenance, writing order review, and continued development through [Ko-fi](https://ko-fi.com/hskylab).
+The core worksheet generator is intended to remain free. Contributions are voluntary and help cover hosting, curriculum list maintenance, writing order review, and continued development.
+
+### International · Ko-fi
+
+Support the project through [Ko-fi](https://ko-fi.com/hskylab) using PayPal.
+
+### China · WeChat
+
+<p align="center">
+  <img src="assets/support/wechat-appreciation.jpg" width="280" alt="WeChat appreciation code for Zhou Wen">
+</p>
+
+Please verify the recipient details shown in WeChat before confirming payment.

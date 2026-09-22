@@ -59,4 +59,16 @@ AGPL-3.0 允许使用、修改、再发布和商业使用。修改后的版本�
 
 ## 支持项目
 
-项目计划保持基础字帖生成功能免费。可以通过 [Ko-fi](https://ko-fi.com/hskylab) 自愿支持服务器、教材字表整理、笔顺校对和功能维护。
+项目计划保持基础字帖生成功能免费。赞赏完全自愿，将用于服务器、教材字表整理、笔顺校对和功能维护。
+
+### 国内 · 微信赞赏
+
+<p align="center">
+  <img src="assets/support/wechat-appreciation.jpg" width="280" alt="周文的微信赞赏码">
+</p>
+
+扫码前请核对微信显示的收款方信息。
+
+### 海外 · Ko-fi
+
+可以通过 [Ko-fi](https://ko-fi.com/hskylab) 使用 PayPal 支持项目。
