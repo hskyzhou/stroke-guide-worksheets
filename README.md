@@ -4,7 +4,7 @@
 
 ![起收笔字帖：中文、英文和数字书写练习](assets/brand/social-preview.svg)
 
-[在线使用](https://handwriting.hskylab.com/) · [源码仓库](https://github.com/hskyzhou/stroke-guide-worksheets) · [提交问题或建议](https://github.com/hskyzhou/stroke-guide-worksheets/issues/new/choose) · [支持项目](https://ko-fi.com/hskylab) · [开发计划](ROADMAP.md)
+[在线使用](https://handwriting.hskylab.com/) · [关于项目](https://handwriting.hskylab.com/about/) · [提交反馈](https://handwriting.hskylab.com/feedback/) · [支持项目](https://handwriting.hskylab.com/support/) · [源码仓库](https://github.com/hskyzhou/stroke-guide-worksheets)
 
 一个在浏览器中生成中文、英文和数字练习字帖的静态网页。支持笔顺、起收笔与方向提示、逐笔加画、指定笔画练习、拼音、描红、教材生字预设以及 A4 打印。
 
@@ -33,6 +33,8 @@ python3 -m http.server 4173
 
 ## 隐私与网络请求
 
+网站说明页面：<https://handwriting.hskylab.com/privacy/>
+
 输入内容和自定义配置在浏览器内处理；配置仅写入当前浏览器的 `localStorage`。项目自身没有账户、分析统计或服务端存储。
 
 Patrick Hand 字体、`pinyin-pro` 拼音库和汉字笔画数据均随项目本地保存。页面启动时不依赖 Google Fonts、jsDelivr 或外部笔画数据服务；只有用户主动点击 Ko-fi、数据来源等外部链接时才会离开本站。
@@ -49,6 +51,8 @@ Patrick Hand 字体、`pinyin-pro` 拼音库和汉字笔画数据均随项目本
 
 ## 参与贡献
 
+网站说明页面：<https://handwriting.hskylab.com/contributing/>
+
 欢迎提交字表纠错、笔顺依据、打印问题和代码改进。请先阅读 [`CONTRIBUTING.md`](CONTRIBUTING.md)。报告安全问题请参阅 [`SECURITY.md`](SECURITY.md)。
 
 请通过 [GitHub Issues](https://github.com/hskyzhou/stroke-guide-worksheets/issues/new/choose) 提交问题或建议，也可以发送邮件到 [xezw211@gmail.com](mailto:xezw211@gmail.com)。请勿附带学生姓名、学校或联系方式等个人信息。
@@ -57,6 +61,8 @@ Patrick Hand 字体、`pinyin-pro` 拼音库和汉字笔画数据均随项目本
 
 ## 许可证
 
+网站说明页面：<https://handwriting.hskylab.com/open-source/>
+
 除第三方材料和另有说明的内容外，本仓库中的原创程序代码以 [GNU Affero General Public License v3.0](LICENSE) 授权。
 
 AGPL-3.0 允许使用、修改、再发布和商业使用。修改后的版本通过网络向用户提供服务时，需要按照许可证向这些用户提供相应源代码。
@@ -64,6 +70,8 @@ AGPL-3.0 允许使用、修改、再发布和商业使用。修改后的版本�
 项目名称、标识以及第三方字体、笔画数据和教材相关内容不因代码采用 AGPL-3.0 而自动获得相同授权。详见 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) 和 [`DATA_SOURCES.md`](DATA_SOURCES.md)。
 
 ## 支持项目
+
+网站支持页面：<https://handwriting.hskylab.com/support/>
 
 项目计划保持基础字帖生成功能免费。赞赏完全自愿，将用于服务器、教材字表整理、笔顺校对和功能维护。
 

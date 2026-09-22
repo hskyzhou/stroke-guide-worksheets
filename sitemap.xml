@@ -6,4 +6,11 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url><loc>https://handwriting.hskylab.com/about/</loc><lastmod>2026-09-22</lastmod><priority>0.7</priority></url>
+  <url><loc>https://handwriting.hskylab.com/open-source/</loc><lastmod>2026-09-22</lastmod><priority>0.5</priority></url>
+  <url><loc>https://handwriting.hskylab.com/privacy/</loc><lastmod>2026-09-22</lastmod><priority>0.5</priority></url>
+  <url><loc>https://handwriting.hskylab.com/third-party/</loc><lastmod>2026-09-22</lastmod><priority>0.5</priority></url>
+  <url><loc>https://handwriting.hskylab.com/contributing/</loc><lastmod>2026-09-22</lastmod><priority>0.6</priority></url>
+  <url><loc>https://handwriting.hskylab.com/support/</loc><lastmod>2026-09-22</lastmod><priority>0.6</priority></url>
+  <url><loc>https://handwriting.hskylab.com/feedback/</loc><lastmod>2026-09-22</lastmod><priority>0.7</priority></url>
 </urlset>

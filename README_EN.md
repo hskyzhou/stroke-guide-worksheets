@@ -4,7 +4,7 @@
 
 ![Stroke Guide Worksheets for Chinese, English, and numbers](assets/brand/social-preview.svg)
 
-[Use online](https://handwriting.hskylab.com/) · [Source repository](https://github.com/hskyzhou/stroke-guide-worksheets) · [Report an issue](https://github.com/hskyzhou/stroke-guide-worksheets/issues/new/choose) · [Support the project](https://ko-fi.com/hskylab)
+[Use online](https://handwriting.hskylab.com/) · [About](https://handwriting.hskylab.com/about/) · [Feedback](https://handwriting.hskylab.com/feedback/) · [Support](https://handwriting.hskylab.com/support/) · [Source repository](https://github.com/hskyzhou/stroke-guide-worksheets)
 
 A static, browser based worksheet generator for Chinese characters, English letters, and numbers. It supports stroke order, start and end markers, direction arrows, progressive stroke practice, focused stroke exercises, pinyin, tracing, curriculum presets, and A4 printing.
 
