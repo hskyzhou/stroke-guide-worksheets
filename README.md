@@ -35,11 +35,11 @@ python3 -m http.server 4173
 
 网站说明页面：<https://handwriting.hskylab.com/privacy/>
 
-输入内容和自定义配置在浏览器内处理；配置仅写入当前浏览器的 `localStorage`。项目自身没有账户、分析统计或服务端存储。
+输入内容和自定义配置在浏览器内处理；配置仅写入当前浏览器的 `localStorage`。项目没有账户，也不会把练习内容发送到项目服务器。
 
-Patrick Hand 字体、`pinyin-pro` 拼音库和汉字笔画数据均随项目本地保存。页面启动时不依赖 Google Fonts、jsDelivr 或外部笔画数据服务；只有用户主动点击 Ko-fi、数据来源等外部链接时才会离开本站。
+本站使用 Cloudflare Web Analytics 统计访问量、页面、来源、国家或地区、设备、浏览器和页面性能。统计不包含输入的汉字、字母、数字或自定义配置。Patrick Hand 字体、`pinyin-pro` 拼音库和汉字笔画数据均随项目本地保存，页面启动时不依赖 Google Fonts、jsDelivr 或外部笔画数据服务。
 
-部署者如果加入统计、账户或服务端功能，应相应更新隐私说明。
+完整说明见[网站隐私页面](https://handwriting.hskylab.com/privacy/)。其他部署者如果改变数据处理方式，应提供与实际情况一致的隐私说明。
 
 ## 数据与书写规范
 

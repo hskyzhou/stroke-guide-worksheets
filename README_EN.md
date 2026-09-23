@@ -33,11 +33,11 @@ Chinese stroke data is stored with the project and loaded on demand. Run the pro
 
 ## Privacy and Network Requests
 
-Worksheet content and custom settings are processed in the browser. Settings are stored only in the current browser's `localStorage`. The project itself has no accounts, analytics, or server side content storage.
+Worksheet content and custom settings are processed in the browser. Settings are stored only in the current browser's `localStorage`. The project has no accounts and does not send worksheet input to its server.
 
-The Patrick Hand typeface, `pinyin-pro`, and Chinese stroke data are stored locally with the project. Initial page loading does not depend on Google Fonts, jsDelivr, or an external stroke data service. External sites are contacted only after a user follows links such as Ko-fi or upstream source links.
+The site uses Cloudflare Web Analytics for visits, pages, referrers, country or region, device, browser, and page performance metrics. Analytics do not include entered Chinese characters, letters, numbers, or custom worksheet settings. The Patrick Hand typeface, `pinyin-pro`, and Chinese stroke data are served locally with the project; initial page loading does not depend on Google Fonts, jsDelivr, or an external stroke data service.
 
-Deployers who add analytics, accounts, advertising, or server side features should update the privacy notice accordingly.
+See the [website privacy notice](https://handwriting.hskylab.com/privacy/) for details. Other deployers should publish a notice that matches their actual data handling.
 
 ## Data and Writing Conventions
 
